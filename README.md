@@ -1,40 +1,100 @@
-GIT HUB COMMANDS: -
+ 📘 Git & GitHub Commands Documentation: -
 
-git CLONE <link from github> (Cloning a repo on our Local machine) <br>
-git config --global user.name "Rikin patel" <br>
-git config --global user.email "rikinpatel@gmail.com" <br>
-git config --list (To verify) <br>
-git push --HELP (to know in detail about this push command -- { (--HELP)= to know in detail about commands }) <br>
+:- This document provides a quick reference to commonly used Git and GitHub commands, their purpose, and workflow explanations.
 
-git init <br>
-git status (ti check for any changes in the repo) <br>
-git diff (to see the difference of current version with last committed version) <br>
-git ADD (adds new or changed files in your working directory to the git staging area) <br>
-git COMMIT -M "Some msg" (to add changes in git repo or it is the record of changes) <br>
-git PUSH origin MAIN (upload local repo content to remote repo) <br>
-git PULL (to fetch the latest files from remote repo) <br>
-git LOG (to see the old commits history) <br> <br>
+📌 What is Git?
 
-Untracked = new files that git doesn't yet track <br> Modified = changed <br> Staged = file is ready to be committed <br> Unmodified = Unchanged <br>
+:- Git is a distributed version control system that helps developers track changes, collaborate, and manage source code efficiently.
 
-git BRANCH (to check branch) <br>
-git CHECKOUT -b {new branch name} (to create new branch) <br>
-git BRANCH -m MAIN (to rename branch) <br>
-git CHECKOUT {branch name} (to Navigate or move to another branch) <br>
-git BRANCH -d {branch name} (to delete branch) <br>
+🔧 Initial Git Setup :- <br>
+Configure Username:- <br>
+:->  git config --global user.name "Rikin Patel" <br>
 
-* Push an existing repository from the command line: -  <br>
-  git REMOTE ADD ORIGIN <LINK FORM GITHUB> <br>
-  git BRANCH -m MAIN <br>
-  git PUSH -U origin MAIN <br>
+Configure Email:- <br>
+:->  git config --global user.email "rikinpatel@gmail.com"<br>
 
-* git push -u origin {BRANCH NAME--(EX:-feature-login)} (Push the local branch to remote) <br>
-  git branch -r (Verify remote branches) <br>
-  git LOG --GRAPH --ONELINE --DECORATE --ALL (for SHOW in TREE-VIEW) <br>
-  git PULL --RABASE origin MAIN 
-  
+Verify Configuration:- <br>
+ :-> git config --list <br> <br>
+
+📥 Working with Repositories:- <br>
+Clone a Repository: <br> 
+:-> git clone <repository_url> <br> <br>
 
 
+👉 Creates a local copy of a remote repository. <br>
+
+Initialize a New Repository: <br>
+:-> git init <br> <br>
+
+📊 Checking Repository Status: <br> 
+Check File Status: <br>
+:-> git status <br> <br>
+
+ See File Differences:- <br>
+  :-> git diff <br> <br>
+
+📂 Git File States:- <br> <br>
+Untracked:->	New files not tracked by Git <br>
+Modified:-> 	Files that have been changed <br>
+Staged:->    	Files ready to be committed <br>
+Unmodified:->	No changes<br> <br>
+
+➕ Adding & Committing Changes:-  <br> <br>
+Add Files to Staging Area:- <br>
+:-> git add <file_name> 
 
 
-    
+or
+
+git add .   <br> <br>
+
+Commit Changes:- <br>
+:->  git commit -m "Your commit message" <br> <br>
+
+🚀 Pushing & Pulling Code:- <br> <br>
+: Push Code to Remote Repository:- <br>
+:-> git push origin main <br> <br>
+
+Pull Latest Changes: <br>
+  :-> git pull <br> 
+
+Push with Upstream Tracking:- <br>
+  :-> git push -u origin <branch_name> <br>
+
+Get Help for Push Command:- <br>
+  :-> git push --help <br> <br>
+
+🌿 Branch Management:- <br>
+List All Branches: <br>
+  :-> git branch <br>
+
+Create a New Branch:- <br>
+  :-> git checkout -b <branch_name> <br>
+
+Switch Branch:- <br>
+  :-> git checkout <branch_name> <br>
+
+Rename Branch to Main <br>
+  :-> git branch -m main <br>
+
+Delete a Branch <br>
+  :-> git branch -d <branch_name> <br>
+
+View Remote Branches <br>
+  :-> git branch -r <br> <br>
+
+🧾 Commit History:- <br> <br>
+View Commit Logs <br>
+  :-> git log <br> <br>
+
+Graph View (Tree Structure):- <br>
+  :-> git log --graph --oneline --decorate --all <br> <br>
+
+🔗 Pushing an Existing Local Repository to GitHub:- <br>
+:-> git remote add origin <repository_url> <br>
+:-> git branch -m main <br>
+:-> git push -u origin main <br> <br>
+
+🔄 Rebase Pull (Advanced):- <br>
+  :-> git pull --rebase origin main <br>
+
