@@ -1,108 +1,246 @@
-# 📘 Git & GitHub Commands Documentation: -
+# Git & GitHub — Quick Reference
 
-:- This document provides a quick reference to commonly used Git and GitHub commands, their purpose, and workflow explanations.
+A concise reference for commonly used Git and GitHub commands, their purpose, and typical workflows.
 
-📌 What is Git?
+## Table of contents
+- [What is Git?](#what-is-git)
+- [Initial setup](#initial-setup)
+- [Working with repositories](#working-with-repositories)
+- [Check status & differences](#check-status--differences)
+- [File states](#file-states)
+- [Staging & committing changes](#staging--committing-changes)
+- [Pushing & pulling](#pushing--pulling)
+- [Branch management](#branch-management)
+- [Commit history](#commit-history)
+- [Push an existing local repo to GitHub](#push-an-existing-local-repo-to-github)
+- [Rebase & advanced operations](#rebase--advanced-operations)
+- [Push branches & tags](#push-branches--tags)
+- [Get help](#get-help)
 
-:- Git is a distributed version control system that helps developers track changes, collaborate, and manage source code efficiently.
+---
 
-🔧 Initial Git Setup :- <br>
-Configure Username:- <br>
-> git config --global user.name "Rikin Patel" <br>
+## What is Git?
+Git is a distributed version control system that helps developers track changes, collaborate, and manage source code efficiently.
 
-Configure Email:- <br>
-:->  git config --global user.email "rikinpatel@gmail.com"<br>
+---
 
-Verify Configuration:- <br>
- :-> git config --list <br> <br>
+## Initial setup
+Configure your identity so commits are credited correctly:
 
-📥 Working with Repositories:- <br>
-Clone a Repository: <br> 
-:-> git clone <repository_url> <br> <br>
+```bash
+git config --global user.name "Rikin Patel"
+git config --global user.email "rikinpatel@gmail.com"
 
+# Verify configuration
+git config --list
+```
 
-👉 Creates a local copy of a remote repository. <br>
+---
 
-Initialize a New Repository: <br>
-:-> git init <br> <br>
+## Working with repositories
 
-📊 Checking Repository Status: <br> 
-Check File Status: <br>
-:-> git status <br> <br>
+Clone a remote repository:
+```bash
+git clone <repository_url>
+```
 
- See File Differences:- <br>
-  :-> git diff <br> <br>
+Initialize a new local repository:
+```bash
+git init
+```
 
-📂 Git File States:- <br> <br>
-Untracked:->	New files not tracked by Git <br>
-Modified:-> 	Files that have been changed <br>
-Staged:->    	Files ready to be committed <br>
-Unmodified:->	No changes<br> <br>
+---
 
-➕ Adding & Committing Changes:-  <br> <br>
-Add Files to Staging Area:- <br>
-:-> git add <file_name> 
+## Check status & differences
 
+Show the working tree status:
+```bash
+git status
+```
 
-or
+Show changes not yet staged:
+```bash
+git diff
+```
 
-git add .   <br> <br>
+Show staged vs. last commit:
+```bash
+git diff --staged
+```
 
-Commit Changes:- <br>
-:->  git commit -m "Your commit message" <br> <br>
+---
 
-🚀 Pushing & Pulling Code:- <br> <br>
-: Push Code to Remote Repository:- <br>
-:-> git push origin main <br> <br>
+## File states
+- Untracked — new files not tracked by Git
+- Modified — files that have been changed
+- Staged — files added to the index (ready to commit)
+- Unmodified — no changes since last commit
 
-Pull Latest Changes: <br>
-  :-> git pull <br> 
+---
 
-Push with Upstream Tracking:- <br>
-  :-> git push -u origin <branch_name> <br>
+## Staging & committing changes
 
-Get Help for Push Command:- <br>
-  :-> git push --help <br> <br>
+Add files to the staging area:
+```bash
+# Add a specific file
+git add <file_name>
 
-🌿 Branch Management:- <br>
-List All Branches: <br>
-  :-> git branch <br>
+# Add all changes (tracked and untracked)
+git add .
+```
 
-Create a New Branch:- <br>
-  :-> git checkout -b <branch_name> <br>
+Commit staged changes:
+```bash
+git commit -m "Your commit message"
+```
 
-Switch Branch:- <br>
-  :-> git checkout <branch_name> <br>
+Create a commit and edit message interactively:
+```bash
+git commit
+```
 
-Rename Branch to Main <br>
-  :-> git branch -m main <br>
+---
 
-Delete a Branch <br>
-  :-> git branch -d <branch_name> <br>
+## Pushing & pulling
 
-View Remote Branches <br>
-  :-> git branch -r <br> <br>
+Push to the remote branch `main`:
+```bash
+git push origin main
+```
 
-🧾 Commit History:- <br> <br>
-View Commit Logs <br>
-  :-> git log <br> <br>
+Push and set upstream for your local branch:
+```bash
+git push -u origin <branch_name>
+```
 
-Graph View (Tree Structure):- <br>
-  :-> git log --graph --oneline --decorate --all <br> <br>
+Pull latest changes from the current branch's remote:
+```bash
+git pull
+```
 
-🔗 Pushing an Existing Local Repository to GitHub:- <br>
-:-> git remote add origin <repository_url> <br>
-:-> git branch -m main <br>
-:-> git push -u origin main <br> <br>
+If you need help with push options:
+```bash
+git push --help
+```
 
-🔄 Rebase Pull (Advanced):- <br>
-  :-> git pull --rebase origin main <br>
+---
 
-🚀 Push All Branches at One Time:- <br> 
-      :-> git push --all origin <br> <br>
+## Branch management
 
-🏷️ Push All Tags (Optional) <br>
-      :-> git push --tags <br>
+List local branches:
+```bash
+git branch
+```
 
+Create a new branch and switch to it:
+```bash
+git checkout -b <branch_name>
+# or using newer command:
+git switch -c <branch_name>
+```
 
+Switch to an existing branch:
+```bash
+git checkout <branch_name>
+# or
+git switch <branch_name>
+```
 
+Rename the current branch to `main`:
+```bash
+git branch -m main
+```
+
+Delete a local branch:
+```bash
+git branch -d <branch_name>
+```
+
+List remote branches:
+```bash
+git branch -r
+```
+
+Fetch remote branches and updates (without merging):
+```bash
+git fetch
+```
+
+---
+
+## Commit history
+
+View commit logs:
+```bash
+git log
+```
+
+Compact, graph-style view:
+```bash
+git log --graph --oneline --decorate --all
+```
+
+Show a file's history:
+```bash
+git log -- <path/to/file>
+```
+
+---
+
+## Push an existing local repo to GitHub
+
+If you have a local repo and want to add a remote and push:
+
+```bash
+git remote add origin <repository_url>
+git branch -m main            # rename current branch to main (if needed)
+git push -u origin main
+```
+
+---
+
+## Rebase & advanced operations
+
+Rebase your current branch onto the latest `main` from origin:
+```bash
+git pull --rebase origin main
+```
+
+Use rebase carefully — it rewrites history for local commits.
+
+To abort an in-progress rebase:
+```bash
+git rebase --abort
+```
+
+---
+
+## Push branches & tags
+
+Push all local branches to the remote:
+```bash
+git push --all origin
+```
+
+Push all tags:
+```bash
+git push --tags
+```
+
+---
+
+## Get help
+Open git's built-in help pages:
+
+```bash
+git help <command>
+# example
+git help commit
+```
+
+Or use the `--help` flag:
+```bash
+git commit --help
+```
+
+---
