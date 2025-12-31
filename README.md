@@ -8,7 +8,7 @@
 
 🔧 Initial Git Setup :- <br>
 Configure Username:- <br>
-:->  git config --global user.name "Rikin Patel" <br>
+> git config --global user.name "Rikin Patel" <br>
 
 Configure Email:- <br>
 :->  git config --global user.email "rikinpatel@gmail.com"<br>
