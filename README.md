@@ -98,3 +98,11 @@ Graph View (Tree Structure):- <br>
 🔄 Rebase Pull (Advanced):- <br>
   :-> git pull --rebase origin main <br>
 
+🚀 Push All Branches at One Time:- <br> 
+      :-> git push --all origin <br> <br>
+
+🏷️ Push All Tags (Optional) <br>
+      :-> git push --tags <br>
+
+
+
