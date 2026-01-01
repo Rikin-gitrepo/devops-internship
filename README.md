@@ -278,3 +278,40 @@ git push origin main
 ```
 
 ---
+
+## Interactive Add (Useful)
+
+Allows you to choose specific files or even parts of files. Select individual files.
+
+---
+
+```bash
+git add -i
+OR
+git add -p
+
+git commit -m "Commit selected changes"
+git push origin main
+```
+
+---
+
+## Ignore Files You Don’t Want to Push (.gitignore)
+
+---
+
+## Create/Edit .gitignore
+```bash
+node_modules/
+.env
+*.log
+dist/
+
+git add .gitignore
+git commit -m "Add gitignore"
+```
+
+---
+
+
+
