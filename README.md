@@ -244,3 +244,20 @@ git commit --help
 ```
 
 ---
+
+## Using a .gitignore file (If folder should stay empty)
+
+Useful when you want the folder but don’t want its contents tracked.
+
+---
+
+```bash
+mkdir uploads
+touch uploads/.gitignore
+
+git add uploads/.gitignore
+git commit -m "Add empty uploads directory"
+git push origin main
+```
+
+---
