@@ -262,7 +262,7 @@ git push origin main
 
 ---
 
-##Using a .gitkeep file
+## Using a .gitkeep file
 
 .gitkeep is a convention (not a Git command) used to keep empty directories.
 
