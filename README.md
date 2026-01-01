@@ -261,3 +261,20 @@ git push origin main
 ```
 
 ---
+
+##Using a .gitkeep file
+
+.gitkeep is a convention (not a Git command) used to keep empty directories.
+
+---
+
+```bash
+mkdir logs
+touch logs/.gitkeep
+
+git add logs/.gitkeep
+git commit -m "Add empty logs directory"
+git push origin main
+```
+
+---
