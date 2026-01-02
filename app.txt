@@ -1,0 +1,11 @@
+1  Welcome to the app
+2  ------------------
+3  Feature status:
+4  Login: pending
+5  Signup: pending
+6  Dashboard: pending
+7  Settings: pending
+8  Notifications: pending
+9  Profile: pending
+10 VERSION = 1.0
+
