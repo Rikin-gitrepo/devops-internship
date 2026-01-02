@@ -7,6 +7,7 @@
 7  Settings: pending
 8  Notifications: pending
 9  Profile: pending
-10 VERSION = 1.1-dev-A
+10 VERSION = 2.0
+
 
 
