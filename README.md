@@ -318,5 +318,36 @@ git commit -m "Add gitignore"
 
 ---
 
+## Stashing (Interruptions Happen)  
+
+---
+
+## Save your unfinished work safely.
+```bash
+git stash
+```
+
+---
+
+## with message
+```bash
+git stash push -m "WIP: login feature"
+```
+
+---
+
+## Check available stashes:
+```bash
+git stash list
+```
+
+```bash
+git stash apply (Apply the latest stash)
+```
+
+---
+
+
+
 
 
