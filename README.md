@@ -347,6 +347,36 @@ git stash apply (Apply the latest stash)
 
 ---
 
+## Restore a Deleted Git Branch (Local)
+
+### Case 1: Branch deleted locally (`git branch -d`)
+```bash
+git reflog
+git branch my-branch <commit-hash>
+git checkout my-branch
+```
+
+### Case 2: Branch deleted locally and remotely
+```bash
+git reflog
+git log --all --oneline --decorate
+git branch my-branch <commit-hash>
+git push origin my-branch
+```
+
+### Case 3: Branch still exists on remote
+```bash
+git fetch origin
+git checkout -b my-branch origin/my-branch
+```
+
+### Case 4: Branch force-deleted (git branch -D)
+```bash
+git reflog
+git branch my-branch <commit-hash>
+```
+
+
 
 
 
