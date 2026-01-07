@@ -376,6 +376,14 @@ git reflog
 git branch my-branch <commit-hash>
 ```
 
+## Remove node_modules.js file from Git (but keep locally)
+```bash
+git rm -r --cached node_modules
+```
+
+
+
+ 
 
 
 
